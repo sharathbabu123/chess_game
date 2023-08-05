@@ -1,8 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
 from lib.board import Board
-from tkinter import PhotoImage
-
 import copy
 
 class ChessGUI(tk.Tk):
@@ -19,7 +17,7 @@ class ChessGUI(tk.Tk):
         self.previous_states.append(copy.deepcopy(self.board))
         # self.board.get_piece(0,0).image = PhotoImage(file="path_to_white_pawn_image.png")
         # self.buttons[0][0].config(image=PhotoImage(file="path_to_white_pawn_image.png"))
-        self.load_images()
+        # self.load_images()
         self.initialize_ui()
 
     def load_images(self):
