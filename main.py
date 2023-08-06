@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 from lib.board import Board
 import copy
+from tkinter import * 
 
 class ChessGUI(tk.Tk):
     def __init__(self, board,master=None):
@@ -30,9 +31,12 @@ class ChessGUI(tk.Tk):
     def initialize_ui(self):
         for x in range(8):
             for y in range(8):
-                btn = tk.Button(self, width=4, height=2, command=lambda x=x, y=y: self.on_square_clicked(x, y))
+                # image = PhotoImage(file = r"C:/Users/shara/Desktop/Bored/August 2023/chess_game/assets/black_rook.png")
+                btn = tk.Button(self, width=4, height=2,command=lambda x=x, y=y: self.on_square_clicked(x, y))
                 btn.grid(row=x, column=y)
+                # btn.pack()
                 self.buttons[x][y] = btn
+
 
         self.update_buttons()
     
